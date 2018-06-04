@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:src="@drawable/me"
+        android:layout_gravity="center"/>
+
+
+    <ImageView
+        android:layout_width="280px"
+        android:layout_height="130px"
+        android:src="@drawable/mac_employee"
+        android:layout_gravity="center"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="253dp"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:paddingTop="50px"
+        android:rowCount="8">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/name_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:text="@string/name_desc" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/dob" />
+
+        <TextView
+            android:id="@+id/dob_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="@string/dob_desc" />
+
+        <TextView
+            android:id="@+id/education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/education" />
+
+        <TextView
+            android:id="@+id/education_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:text="@string/education_desc" />
+
+        <TextView
+            android:id="@+id/experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/experience" />
+
+        <TextView
+            android:id="@+id/experience_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:text="@string/experience_desc" />
+
+        <TextView
+            android:id="@+id/hobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/hobbies" />
+
+        <TextView
+            android:id="@+id/hobbies_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:text="@string/hobbies_desc" />
+
+    </GridLayout>
+
+
+</LinearLayout>

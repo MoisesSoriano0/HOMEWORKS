@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diario4</string>
+    <string name="name">Nombre: </string>
+    <string name="name_desc">Moises Soriano</string>
+    <string name="dob">Fec. de Nac.: </string>
+    <string name="dob_desc">09/04/1989</string>
+    <string name="education">Educacion: </string>
+    <string name="education_desc">Ingeniero en Sistemas</string>
+    <string name="experience">Experiencia: </string>
+    <string name="experience_desc"> Desarrollador Coppel S.A. de C.V\nAnalista Sistemas Coppel S.A. de C.V.</string>
+    <string name="hobbies">Pasatiempos: </string>
+    <string name="hobbies_desc">EcoTurismo, Peliculas</string>
+</resources>

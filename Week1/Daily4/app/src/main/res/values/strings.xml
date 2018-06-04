@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Daily4</string>
+    <string name="name">Name: </string>
+    <string name="name_desc">Moises Soriano</string>
+    <string name="dob">DOB: </string>
+    <string name="dob_desc">09/04/1989</string>
+    <string name="education">Education: </string>
+    <string name="education_desc">Computer Systems Engineer</string>
+    <string name="experience">Experience:  </string>
+    <string name="experience_desc"> Developer Coppel S.A. de C.V\nComputer Systems Analyst Coppel S.A. de C.V.</string>
+    <string name="hobbies">Hobbies: </string>
+    <string name="hobbies_desc">EcoTraveling, Movies</string>
+</resources>
