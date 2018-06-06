@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ImplicitIntentsActivity">
+
+    <TextView
+        android:text="@string/implicit_intents"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageCamera"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="onClickButtonImplicit"
+        android:text="@string/camera" />
+
+    <Button
+        android:id="@+id/btnShareString"
+        android:onClick="onClickButtonImplicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_string" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="250dp"
+            android:inputType="phone"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnCallNumber"
+            android:onClick="onClickButtonImplicit"
+            android:text="@string/call_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

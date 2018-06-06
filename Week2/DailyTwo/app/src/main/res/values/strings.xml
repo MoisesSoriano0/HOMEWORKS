@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DailyTwo</string>
+    <string name="implicit_intents">Implicit Intents</string>
+    <string name="emi_calculator">EMI Calculator</string>
+    <string name="user_form">User Form</string>
+    <string name="camera">CAMERA</string>
+    <string name="share_string">SHARE STRING</string>
+    <string name="call_number">CALL NUMBER</string>
+    <string name="principal">Principal:</string>
+    <string name="rate">Rate:</string>
+    <string name="time">Time</string>
+    <string name="save">Save</string>
+    <string name="see_people">See People</string>
+</resources>
