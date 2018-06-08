@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DailyFour</string>
+    <string name="asynctask">AsyncTask</string>
+    <string name="first_click_serial_second_click_parallel">First Click Serial, Second Click Parallel</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/first_click_serial_second_click_parallel" />
+
+    <Button
+        android:id="@+id/btnAsyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAsyncTask"
+        android:text="@string/asynctask" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOne"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="1"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp" />
+    <ProgressBar
+        android:id="@+id/progressBarTwo"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="1"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp" />
+    <ProgressBar
+        android:id="@+id/progressBarThree"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="1"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp" />
+    <ProgressBar
+        android:id="@+id/progressBarFour"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="1"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
