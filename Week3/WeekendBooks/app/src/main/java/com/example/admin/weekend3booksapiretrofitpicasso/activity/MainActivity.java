@@ -41,12 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSearch(View view) {
-//        Toast.makeText(MainActivity.this,"holaaaaaaaaaa",Toast.LENGTH_LONG).show();
-//        System.out.println("que traes: " + etBookSearch.getText());
-//        System.out.println("afuera ********" + etBookSearch.getText());
-//        if (etBookSearch.getText().toString().equals("")) {
-//            System.out.println("entro ********" + etBookSearch.getText());
-//        }
 
         if (!etBookSearch.getText().toString().equals("")) {
 
