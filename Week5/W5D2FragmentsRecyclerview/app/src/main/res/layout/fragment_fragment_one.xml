@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentOne">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvNewCar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:text="Add New Car" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etModel"
+            android:hint="Model"
+            android:layout_width="260dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etType"
+            android:hint="Type"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etYear"
+            android:hint="Year"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSendData"
+            android:text="@string/send_data"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -19,40 +19,4 @@ public class Book {
         this.volumeInfo = volumeInfo;
     }
 
-    //    @SerializedName("smallThumbnail")
-//    private String urlThumbnail;
-//    @SerializedName("title")
-//    private String title;
-//    @SerializedName("authors")
-//    private String author;
-//
-//    public Book(String urlThumbnail, String title, String author) {
-//        this.urlThumbnail = urlThumbnail;
-//        this.title = title;
-//        this.author = author;
-//    }
-//
-//    public String getUrlThumbnail() {
-//        return urlThumbnail;
-//    }
-//
-//    public void setUrlThumbnail(String urlThumbnail) {
-//        this.urlThumbnail = urlThumbnail;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getAuthor() {
-//        return author;
-//    }
-//
-//    public void setAuthor(String author) {
-//        this.author = author;
-//    }
 }
