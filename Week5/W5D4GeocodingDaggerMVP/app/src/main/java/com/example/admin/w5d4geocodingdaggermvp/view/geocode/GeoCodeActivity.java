@@ -17,16 +17,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.admin.w5d4geocodingdaggermvp.R;
+import com.example.admin.w5d4geocodingdaggermvp.di.components.DaggerGeocodeComponent;
 
 import org.w3c.dom.Text;
+
+import javax.inject.Inject;
 
 public class GeoCodeActivity extends AppCompatActivity implements GeoCodeContract.View {
 
     public static final int MY_PERMISSIONS_REQUEST_READ_LOCATION = 5;
     public static final String TAG = GeoCodeActivity.class.getSimpleName() + "_TAG";
-    private GeoCodePresenter presenter;
+//    private GeoCodePresenter presenter;
     private TextView tvLocation;
     private TextView tvAddress;
+
+    //Dagger2 Step 4: Inject presenter
+    @Inject
+    GeoCodePresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +44,15 @@ public class GeoCodeActivity extends AppCompatActivity implements GeoCodeContrac
         tvLocation = findViewById(R.id.tvLocation);
         tvAddress = findViewById(R.id.tvAddress);
 
-        presenter = new GeoCodePresenter();
+        //Dagger2 Step 3: Initialize dagger component
+//        DaggerGeoCodeComponent //the graph when we rebuild
+        DaggerGeocodeComponent
+                .create()
+                .inject(this);
+
+
+        //We don't need to initialize it no more, cause we injected the oresenter
+//        presenter = new GeoCodePresenter();
         presenter.attachView(this);
 
 //        Asks the user for location

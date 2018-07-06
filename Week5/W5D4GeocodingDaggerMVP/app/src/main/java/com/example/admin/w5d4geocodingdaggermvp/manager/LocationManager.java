@@ -14,10 +14,16 @@ public class LocationManager {
     LocationListener locationListener;
 
 //    Object component - activity, Object listener is the presenter
-    public LocationManager(Object component, Object listener){
+//    public LocationManager(Object component, Object listener){
+////        this.fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient ((Activity) component);
+////        this.locationListener = (LocationListener) listener;
+////    }
+
+    public void initialize(Object component, Object listener) {
         this.fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient ((Activity) component);
         this.locationListener = (LocationListener) listener;
     }
+
 
     @SuppressLint("MissingPermission")
     public void getLocation(){
