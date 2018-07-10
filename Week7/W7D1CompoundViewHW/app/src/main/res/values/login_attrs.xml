@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoginLayout">
+        <attr name="userAttr" format="string"/>
+        <attr name="passAttr" format="string"/>
+    </declare-styleable>
+</resources>
