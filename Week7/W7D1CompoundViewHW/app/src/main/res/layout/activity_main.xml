@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:userAttr="LoginId"
-        app:passAttr="Passerergfagf">
+        app:passAttr="Password">
 
 
     </com.example.admin.w7d1compoundviewhw.compoundview.LoginLayout>

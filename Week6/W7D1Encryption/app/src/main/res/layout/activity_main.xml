@@ -25,10 +25,25 @@
         android:text="Get Data" />
 
     <Button
-        android:onClick="onClearData"
-        android:text="Clear Data"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="onClearData"
+        android:text="Clear Data" />
+
+    <!--Encryption-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEncrypt"
+        android:text="Encrypt Data" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDecrypt"
+        android:text="Decrypt Data" />
+
 
     <TextView
         android:id="@+id/tvMain"
@@ -36,7 +51,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
         android:textSize="25dp" />
-
 
 
 </LinearLayout>

@@ -11,6 +11,21 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.KeyPair;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText etMain;
@@ -18,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private String MY_SHARED_PREF = "mySharedPref";
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+    private KeystoreWrapper keystoreWrapper;
+    private CipherWrapper cipherWrapper;
+    private KeyPair keyPair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +48,20 @@ public class MainActivity extends AppCompatActivity {
 
         //get shared preferences, sharedpreference file
         sharedPreferences = getSharedPreferences(MY_SHARED_PREF, Context.MODE_PRIVATE);
+
+
+        //Encryption
+
+        try {
+            keystoreWrapper = new KeystoreWrapper(this);
+
+            cipherWrapper = new CipherWrapper();
+            keyPair = keystoreWrapper.getKeyPair("something");
+
+
+        } catch (CertificateException | NoSuchAlgorithmException | KeyStoreException | IOException | NoSuchPaddingException | UnrecoverableKeyException | NoSuchProviderException | InvalidAlgorithmParameterException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -58,5 +90,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClearData(View view) {
         editor.clear();
+    }
+
+    public void onEncrypt(View view) throws NoSuchAlgorithmException, UnrecoverableKeyException, InvalidAlgorithmParameterException, KeyStoreException, NoSuchProviderException, BadPaddingException, InvalidKeyException, IllegalBlockSizeException {
+
+        String plainText = etMain.getText().toString();
+        String cipherText = cipherWrapper.encrypt(plainText, keyPair.getPublic());
+        tvMain.setText(cipherText);
+    }
+
+    public void onDecrypt(View view) throws BadPaddingException, InvalidKeyException, IllegalBlockSizeException {
+        String cipherText = tvMain.getText().toString();
+        String plainText = cipherWrapper.decrypt(cipherText, keyPair.getPrivate());
+        tvMain.setText(plainText);
     }
 }
