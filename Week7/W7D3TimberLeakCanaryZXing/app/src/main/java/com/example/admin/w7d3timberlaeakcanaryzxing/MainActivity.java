@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
         new MyThread().start();
     }
 
+    public void onCauseML(View view) {
+        causeML();
+    }
+
     private static class MyThread extends Thread {
         @Override
         public void run() {
