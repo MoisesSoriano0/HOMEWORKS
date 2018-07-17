@@ -1,0 +1,60 @@
+
+1. What are ContentProviders?
+They encapsulate data and provide it to applications through the single ContentResolver interface
+A content provider is only required if you need to share data between multiple applications.
+
+2. What do we need Providers from?
+To share data between multiple applications
+
+3. Are content providers public by default?
+Yes, dependind in the permissions.
+A premission-less provider is wide open, with any app being able to read and write.
+
+If a provider's application doesn't specify any permissions, then other applications' access to the provider's data is determined solely by the android:exported value (true grants unlimited access to all applications; false blocks access by other applications) and android:grantUriPermissions value (which gets complicated).
+
+
+4. How can you secure a content provider?
+With read and write permissions
+To provide additional protection for sensitive data, 
+you can encrypt local files using a key that is not directly accessible to the application.
+
+When creating a ContentProvider that is exported for use by other applications, 
+you can specify a single permission for reading and writing, 
+or you can specify distinct permissions for reading and writing. 
+You should limit your permissions to those required to accomplish the task at hand
+
+5. How can you ensure that only the apps you own can access a Content Provider?
+If you are using a content provider for sharing data between only your own apps, 
+it is preferable to use the android:protectionLevel attribute set to signature protection.
+
+6. What is a Content Resolver?
+A class that provides applications access to the content model.
+
+7. When you want to access data in a content provider, you use the ContentResolver object in your application's Context 
+to communicate with the provider as a client. 
+The ContentResolver object communicates with the provider object, an instance of a class that implements ContentProvider.
+
+The provider object receives data requests from clients, performs the requested action, and returns the results. 
+This object has methods that call identically-named methods in the provider object, an instance of one of the concrete subclasses of ContentProvider. 
+
+The ContentResolver methods provide the basic "CRUD" (create, retrieve, update, and delete) functions of persistent storage.
+
+8. What are Loaders?
+The Loader API lets you load data from a content provider or other data source for display in an FragmentActivity or Fragment.
+Loaders run on separate threads to prevent janky or unresponsive UI.
+Loaders simplify thread management by providing callback methods when events occur.
+Loaders can implement an observer to monitor for changes in the underlying data source. For example, CursorLoader automatically registers a ContentObserver to trigger a reload when data changes
+Loaders persist and cache results across configuration changes to prevent duplicate queries.
+
+
+9. What is the LoaderManager?
+Simply stated, the LoaderManager is responsible for managing one or more Loaders associated with an Activity or Fragment. 
+Each Activity and each Fragment has exactly one LoaderManager instance that is in charge of starting, stopping, retaining, restarting, and destroying its Loaders. 
+
+The LoaderManager does not know how data is loaded, nor does it need to. Rather, the LoaderManager instructs its Loaders when to start/stop/reset their load, retaining their state across configuration changes and providing a simple interface for delivering results back to the client.
+
+
+10. What are CursorLoaders?
+A CursorLoader runs an asynchronous query in the background against a ContentProvider, and returns the results to the Activity or FragmentActivity from which it was called. 
+This allows the Activity or FragmentActivity to continue to interact with the user while the query is ongoing.
+
