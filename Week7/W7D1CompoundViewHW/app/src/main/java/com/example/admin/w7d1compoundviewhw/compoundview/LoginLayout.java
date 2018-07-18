@@ -24,22 +24,20 @@ public class LoginLayout extends LinearLayout {
 
     public LoginLayout(Context context, AttributeSet attrs) {
         super(context);
-        init(context,attrs);
+        init(context,attrs,0,0);
     }
 
-//    public LoginLayout(Context context, @Nullable AttributeSet attrs) {
-//        super(context, attrs);
-//    }
-//
-//    public LoginLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-//        super(context, attrs, defStyleAttr);
-//    }
-//
-//    public LoginLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-//        super(context, attrs, defStyleAttr, defStyleRes);
-//    }
+    public LoginLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context, attrs, defStyleAttr,0);
+    }
 
-    private void init(Context context, AttributeSet attrs) {
+    public LoginLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         inflate(context, R.layout.login_layout, this);
 
         int[] sets = {R.attr.userAttr, R.attr.passAttr};
@@ -54,8 +52,6 @@ public class LoginLayout extends LinearLayout {
 
         System.out.println(typedArray1.getText(index0));
         System.out.println(typedArray1.getText(index1));
-
-
 
         tvUserName.setText(typedArray1.getText(index1));
         tvPassword.setText(typedArray1.getText(index0));
