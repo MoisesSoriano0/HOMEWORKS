@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloKotlin</string>
+    <string name="changed_the_text_again">Changed the text again</string>
+    <string name="random_heading">here is the random number between 0 and %1d</string>
+</resources>
