@@ -77,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
         causeML();
     }
 
+    public void onPDF(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("source", "main");
+        startActivity(intent);
+    }
+
     private static class MyThread extends Thread {
         @Override
         public void run() {
