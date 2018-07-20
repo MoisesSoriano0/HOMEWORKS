@@ -1,7 +1,7 @@
 package com.example.admin.moviedbapi;
 
 import com.example.admin.moviedbapi.base.BasePresenter;
-import com.example.admin.moviedbapi.movies.Result;
+import com.example.admin.moviedbapi.data.Result;
 
 public interface HomeContract {
 
