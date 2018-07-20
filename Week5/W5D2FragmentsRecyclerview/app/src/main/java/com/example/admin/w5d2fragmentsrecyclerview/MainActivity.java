@@ -1,8 +1,10 @@
 package com.example.admin.w5d2fragmentsrecyclerview;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.admin.w5d2fragmentsrecyclerview.fragments.FragmentOne;
@@ -40,17 +42,19 @@ public class MainActivity extends AppCompatActivity implements FragmentOne.OnFra
         FragmentTwo fragmentTwo = (FragmentTwo) getSupportFragmentManager()
                 .findFragmentById(R.id.flFragTwo);
 
-
         if (fragmentTwo != null) {
             fragmentTwo.updateFragmentTwo(car);
         }
 
-
-//        tvNewCar.setText(car.getModel().toString());
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    public void onSecondActivity(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }

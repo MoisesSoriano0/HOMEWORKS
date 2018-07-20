@@ -20,7 +20,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class
+MainActivity extends AppCompatActivity {
 
     EmployeeAdapter adapter;
     private RecyclerView recyclerView;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        Create handler for the RetrofitInstance interface
-        GetEmployeeDataService service = RetrofitInstance.getRetrofitInstance().create(GetEmployeeDataService.class);
+        GetEmployeeDataService service = RetrofitInstance.getRetrofitInstance()
+                .create(GetEmployeeDataService.class);
 
 //        Call the method with parameter in the interface to get the employee data
         Call<EmployeeList> call = service.getEmployeeData(100);

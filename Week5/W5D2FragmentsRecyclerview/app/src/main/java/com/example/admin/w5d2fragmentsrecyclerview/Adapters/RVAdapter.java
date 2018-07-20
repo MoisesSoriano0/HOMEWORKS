@@ -1,4 +1,4 @@
-package com.example.admin.w5d2fragmentsrecyclerview.fragments;
+package com.example.admin.w5d2fragmentsrecyclerview.Adapters;
 
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -15,16 +15,6 @@ import java.util.ArrayList;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> {
     private ArrayList<Car> cars = new ArrayList<>();
-//    private Car cars2;
-
-//    public RVAdapter(Car cars2) {
-//        this.cars2 = cars2;
-//    }
-
-//    public RVAdapter(ArrayList<Car> cars) {
-//        this.cars = cars;
-//    }
-
 
     public RVAdapter() {
     }

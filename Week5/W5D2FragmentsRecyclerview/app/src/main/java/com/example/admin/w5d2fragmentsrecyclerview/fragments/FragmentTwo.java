@@ -12,13 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
+import com.example.admin.w5d2fragmentsrecyclerview.Adapters.RVAdapter;
 import com.example.admin.w5d2fragmentsrecyclerview.Car;
-import com.example.admin.w5d2fragmentsrecyclerview.CarList;
 import com.example.admin.w5d2fragmentsrecyclerview.R;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
