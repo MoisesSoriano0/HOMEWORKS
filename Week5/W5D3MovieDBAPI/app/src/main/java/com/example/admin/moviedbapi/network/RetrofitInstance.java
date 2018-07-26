@@ -7,7 +7,7 @@ public class RetrofitInstance {
 
     private static RetrofitInstance INSTANCE;
     private GetMoviesDataService moviesAPI;
-
+    String BASE_URL = "https://api.themoviedb.org/3/search/";
 
     private RetrofitInstance() {
         moviesAPI = createRandomAPI(prepareRetrofit());
@@ -22,7 +22,7 @@ public class RetrofitInstance {
 
     private Retrofit prepareRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl(moviesAPI.BASE_URL)
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
@@ -31,7 +31,7 @@ public class RetrofitInstance {
         return client.create(GetMoviesDataService.class);
     }
 
-    public GetMoviesDataService getRandomAPI() {
+    public GetMoviesDataService getMovieAPI() {
         return moviesAPI;
     }
 }

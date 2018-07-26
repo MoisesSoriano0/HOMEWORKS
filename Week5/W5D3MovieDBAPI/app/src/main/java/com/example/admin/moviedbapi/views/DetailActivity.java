@@ -1,4 +1,4 @@
-package com.example.admin.moviedbapi.detail;
+package com.example.admin.moviedbapi.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

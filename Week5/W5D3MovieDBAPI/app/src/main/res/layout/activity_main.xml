@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".views.HomeActivity">
 
     <Button
         android:text="Search"
@@ -30,6 +30,7 @@
         <Button
             android:text="Sumbit"
             android:id="@+id/btnSumbit"
+            android:onClick="onClickSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

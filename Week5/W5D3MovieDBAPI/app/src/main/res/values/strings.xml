@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieDBAPI</string>
+    <string name="movieposter">MoviePoster</string>
 </resources>

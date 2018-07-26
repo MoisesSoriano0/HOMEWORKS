@@ -4,11 +4,11 @@ package com.example.admin.w5d5testfridayreddit.model;
 import java.util.List;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Data_ implements Parcelable
+public class DataReddit implements Parcelable
 {
 
     @SerializedName("approved_at_utc")
@@ -284,24 +284,24 @@ public class Data_ implements Parcelable
     @SerializedName("is_video")
     @Expose
     private Boolean isVideo;
-    public final static Creator<Data_> CREATOR = new Creator<Data_>() {
+    public final static Creator<DataReddit> CREATOR = new Creator<DataReddit>() {
 
 
         @SuppressWarnings({
             "unchecked"
         })
-        public Data_ createFromParcel(Parcel in) {
-            return new Data_(in);
+        public DataReddit createFromParcel(Parcel in) {
+            return new DataReddit(in);
         }
 
-        public Data_[] newArray(int size) {
-            return (new Data_[size]);
+        public DataReddit[] newArray(int size) {
+            return (new DataReddit[size]);
         }
 
     }
     ;
 
-    protected Data_(Parcel in) {
+    protected DataReddit(Parcel in) {
         this.approvedAtUtc = ((Object) in.readValue((Object.class.getClassLoader())));
         this.subreddit = ((String) in.readValue((String.class.getClassLoader())));
         this.selftext = ((String) in.readValue((String.class.getClassLoader())));
@@ -395,7 +395,7 @@ public class Data_ implements Parcelable
         this.isVideo = ((Boolean) in.readValue((Boolean.class.getClassLoader())));
     }
 
-    public Data_() {
+    public DataReddit() {
     }
 
     public Object getApprovedAtUtc() {

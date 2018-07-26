@@ -12,23 +12,11 @@
         android:orientation="horizontal">
 
         <SearchView
+            android:id="@+id/svSearch"
             android:layout_width="280dp"
             android:layout_height="wrap_content" />
 
-        <!--<ImageButton-->
-        <!---->
-        <!--android:background="@drawable/btn_round_shape"-->
-        <!--android:src="@drawable/search_btn_bg"-->
-        <!--android:layout_width="105dp"-->
-        <!--android:layout_height="wrap_content" />-->
 
-        <Button
-
-            android:layout_width="105dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/search_btn_bg"
-            android:text="@string/search" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

@@ -5,17 +5,47 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitInstance {
 
-    private static Retrofit retrofit;
-    public static final String BASE_URL = "https://www.reddit.com/";
+    public static final String BASE_URL = "http://www.reddit.com/r/";
 
-    public static Retrofit getRetrofitInstance() {
-        if (retrofit == null) {
+    private static Retrofit retrofit;
+
+    static RedditDataService redditDataService;
+
+    private static RetrofitInstance instance;
+
+    public RetrofitInstance() {
+        redditDataService = createRds(getRetrofitInstance());
+    }
+
+    private Retrofit getRetrofitInstance(){
+
+        if(retrofit == null){
+
             retrofit = new retrofit2.Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
+        }
+
+        return retrofit;
+
+    }
+
+    public static RetrofitInstance getInstance() {
+        if (instance == null) {
+            instance = new RetrofitInstance();
 
         }
-        return retrofit;
+
+        return instance;
+    }
+
+    public static RedditDataService createRds(Retrofit retro) {
+        return retro.create(RedditDataService.class);
+    }
+
+    public RedditDataService getredditDataService()
+    {
+        return redditDataService;
     }
 }

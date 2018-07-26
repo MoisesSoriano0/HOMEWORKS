@@ -3,7 +3,7 @@ package com.example.admin.w5d5testfridayreddit.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -15,7 +15,7 @@ public class Child implements Parcelable
     private String kind;
     @SerializedName("data")
     @Expose
-    private Data_ data;
+    private DataReddit data;
     public final static Creator<Child> CREATOR = new Creator<Child>() {
 
 
@@ -35,7 +35,7 @@ public class Child implements Parcelable
 
     protected Child(Parcel in) {
         this.kind = ((String) in.readValue((String.class.getClassLoader())));
-        this.data = ((Data_) in.readValue((Data_.class.getClassLoader())));
+        this.data = ((DataReddit) in.readValue((DataReddit.class.getClassLoader())));
     }
 
     public Child() {
@@ -49,11 +49,11 @@ public class Child implements Parcelable
         this.kind = kind;
     }
 
-    public Data_ getData() {
+    public DataReddit getData() {
         return data;
     }
 
-    public void setData(Data_ data) {
+    public void setData(DataReddit data) {
         this.data = data;
     }
 
